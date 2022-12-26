@@ -1,9 +1,12 @@
 import Axios from "axios";
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { setUser } from "../component/reducers/user/userSlice";
 
 export const Index = () => {
     const emailField = useRef(null);
     const passwordField = useRef(null);
+    const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -16,6 +19,11 @@ export const Index = () => {
                 
                 if (userToLog){
                     if( userToLog.password === passwordField.current.value){
+                        dispatch(setUser({
+                            email: userToLog.email,
+                            fullName: `${userToLog.firstName} ${userToLog.lastName}`,
+                            token: Date.now(),
+                        })) 
 
                     }
                 }
