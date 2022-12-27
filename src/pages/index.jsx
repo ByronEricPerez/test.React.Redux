@@ -2,11 +2,13 @@ import Axios from "axios";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setUser } from "../component/reducers/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export const Index = () => {
     const emailField = useRef(null);
     const passwordField = useRef(null);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -24,7 +26,7 @@ export const Index = () => {
                             fullName: `${userToLog.firstName} ${userToLog.lastName}`,
                             token: Date.now(),
                         })) 
-
+                        navigate('/home');
                     }
                 }
             })
