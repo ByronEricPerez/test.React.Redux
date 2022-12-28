@@ -15,7 +15,7 @@ export const Home = () => {
     const user = useSelector(state => state.user);
 
     useEffect(() => {
-        Axios.get('https://dummyjson.com/docs/products')
+        Axios.get('https://dummyjson.com/products')
             .then(response => {
                 setProducts(response.data.products);
             })
@@ -33,7 +33,7 @@ export const Home = () => {
             
             <button onClick={handleLogout}>Log out</button>
             <hr />
-            {/* <ProductsList products={products} /> */}
+            <ProductsList products={products} />
         </div>
     )
 }
