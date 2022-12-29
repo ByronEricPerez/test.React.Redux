@@ -18,16 +18,17 @@ export const ProductsList = ({ products }) => {
     
     return (
         <>
-            <h2>Listadooo</h2>
+            <h2 className='text-4xl p-2'>Listadooo</h2>
             <div className="Articles">
                 {
                     products.map(product => {
                         return (
-                            <div key={product.id}>
+                            //seguir probando columnas
+                            <div className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mx-1 grid grid-cols-3" key={product.id}>
                                 <h4>{product.title}</h4>
-                                <p>Price {product.price}</p>
+                                <p>Price {'$' + product.price}</p>
                                 <p>Category {product.category}</p>
-                                <button
+                                <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 border border-blue-700 rounded'
                                 onClick={() => handleAddOrRemoveProduct(product.id)}
                                 >
                                 {productsList.find(pdt => pdt.id === product.id) ? "Remove" : "Add"} to Cart

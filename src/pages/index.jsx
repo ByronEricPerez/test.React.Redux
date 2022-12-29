@@ -34,17 +34,17 @@ export const Index = () => {
     return (
         <div>
             <div>
-                <h2>Login</h2>
+                <h2 className="text-7x1 mt-5">Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label>Email address</label>
-                        <input type="email" ref={emailField} />
+                        <label>Email address </label>
+                        <input className="mb-2" type="email" ref={emailField} />
                     </div>
                     <div>
-                        <label>Password</label>
+                        <label>Password </label>
                         <input type="password" ref={passwordField} />
                     </div>
-                    <button type="submit">Submit</button>
+                    <button className="mb-5 mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
                 </form>
             </div>
         </div>
