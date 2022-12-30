@@ -23,7 +23,6 @@ export const ProductsList = ({ products }) => {
                 {
                     products.map(product => {
                         return (
-                            //seguir probando columnas
                             <div className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mx-1 grid grid-cols-3" key={product.id}>
                                 <h4>{product.title}</h4>
                                 <p>Price {'$' + product.price}</p>

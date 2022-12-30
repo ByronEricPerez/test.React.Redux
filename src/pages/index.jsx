@@ -34,7 +34,7 @@ export const Index = () => {
     return (
         <div>
             <div>
-                <h2 className="text-7x1 mt-5">Login</h2>
+                <h2 className="text-7x1 mt-5 mb-5">Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Email address </label>
